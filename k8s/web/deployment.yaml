@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: marmitech-web
+  labels:
+    app: marmitech-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: marmitech-web
+  template:
+    metadata:
+      labels:
+        app: marmitech-web
+    spec:
+      containers:
+        - name: marmitech-web
+          image: marmitech-web:1.0
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+            limits:
+              memory: "256Mi"
+              cpu: "200m"
