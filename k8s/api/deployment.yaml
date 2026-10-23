@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: marmitech-api
+  labels:
+    app: marmitech-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: marmitech-api
+  template:
+    metadata:
+      labels:
+        app: marmitech-api
+    spec:
+      terminationGracePeriodSeconds: 35
+      containers:
+        - name: marmitech-api
+          image: marmitech-api:1.0
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 5"]
+          envFrom:
+            - configMapRef:
+                name: api-config
+            - secretRef:
+                name: api-secret
+          resources:
+            requests:
+              memory: "384Mi"
+              cpu: "150m"
+            limits:
+              memory: "768Mi"
+              cpu: "500m"
