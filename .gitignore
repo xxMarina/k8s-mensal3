@@ -1,0 +1,25 @@
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Node / Angular
+**/node_modules/
+**/dist/
+**/.angular/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Java / Maven
+**/target/
+**/.mvn/wrapper/maven-wrapper.jar
+*.class
+application.properties
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
