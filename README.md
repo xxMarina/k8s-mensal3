@@ -115,3 +115,27 @@ marmitech/
 │   └── evidencias/     # Capturas de tela para entrega
 └── README.md           # Guia de execução
 ```
+
+---
+
+## Evidências de Funcionamento
+
+As capturas de tela comprovando todos os requisitos do edital estão disponíveis na pasta [`docs/evidencias/`](./docs/evidencias/):
+
+### Infraestrutura e Kubernetes
+
+* **Pods em Execução:** ![Get Pods](./docs/evidencias/Get-Pods.png)
+* **Services Criados:** ![Get Services](./docs/evidencias/Get-Services.png)
+* **Deployments e Réplicas:** ![Get Deployments](./docs/evidencias/Get-Deployments.png)
+* **Balanceamento de Carga:** ![Health](./docs/evidencias/Health.png)
+* **Exclusão de Pod (Self-Healing 1):** ![Delete Pod 1](./docs/evidencias/Delete-Pod1.png)
+* **Recriação Automática (Self-Healing 2):** ![Delete Pod 2](./docs/evidencias/Delete-Pod2.png)
+
+### Aplicação em Execução no Navegador
+
+* **Tela de Login:** ![Login](./docs/evidencias/Login.png)
+* **Cadastro de Cliente:** ![Criar Cliente](./docs/evidencias/Criar-Cliente.png)
+* **Cadastro de Produto:** ![Criar Produto](./docs/evidencias/Criar-Produto.png)
+* **Criação de Pedido:** ![Criar Pedido](./docs/evidencias/Criar-Pedido.png)
+* **Fila de Pedidos em Tempo Real:** ![Fila de Pedidos](./docs/evidencias/Fila-de-Pedidos.png)
+* **Histórico de Pedidos:** ![Historico Pedidos](./docs/evidencias/Historico-Pedidos.png)
